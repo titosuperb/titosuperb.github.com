@@ -9,6 +9,12 @@ input {
   border-radius: 0.5em;
 }
 
+button {
+  background-color: #2d2d2d;
+  border-width: 0px;
+  color: white;
+}
+
 #top {
   font-size: 200%;
 }
@@ -17,7 +23,7 @@ input {
   padding: 0.8%;
   background-color: #2d2d2d;
   display: grid;
-  grid-template-columns: 40% 5% 10% 5% 15% 5% 20%;
+  grid-template-columns: 30% 5% 10% 5% 15% 5% 20% 5% 5%;
 }
 .pricexcuantity {
   padding: 0.8%;
