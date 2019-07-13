@@ -14,25 +14,18 @@ button {
   border-width: 0px;
   color: white;
 }
-
-#top {
-  font-size: 200%;
-}
-
+/* item line styling  */
 .item_line {
   padding: 0.8%;
   background-color: #2d2d2d;
   display: grid;
   grid-template-columns: 30% 2% 10% 2% 15% 1% 20% 10% 10%
 }
+
 .pricexcuantity {
   padding: 0.8%;
   border-color: white;
   border-width: 0.2em;
   border-style: solid;
   border-radius: 0.5em;
-}
-
-.middle-text {
-
 }
