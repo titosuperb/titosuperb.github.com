@@ -1,3 +1,32 @@
 body {
-  color: blue;
+  background-color: #222222;
+}
+
+input {
+  color: white;
+  background-color: #2d2d2d;
+  border: 0.2em solid #e3e3e3;
+  border-radius: 0.5em;
+}
+
+#top {
+  font-size: 200%;
+}
+
+.item_line {
+  padding: 0.8%;
+  background-color: #2d2d2d;
+  display: grid;
+  grid-template-columns: 40% 5% 10% 5% 15% 5% 20%;
+}
+.pricexcuantity {
+  padding: 0.8%;
+  border-color: white;
+  border-width: 0.2em;
+  border-style: solid;
+  border-radius: 0.5em;
+}
+
+.middle-text {
+
 }
