@@ -11,18 +11,37 @@
   </head>
   <body>
     <h1>Cart tracker <button type="button" name="button">Calculate</button></h1>
-    <!-- The following is a item line  -->
-    <div class="item_line">
-      <input type="text" name="Item-name" value="">
-      <div class="middle-text"></div>
-      <input type="number" name="Cuantity" value="">
-      <div class="middle-text"></div>
-      <input type="number" name="Price" value="">
-      <div class="middle-text"></div>
-      <div class="pricexcuantity"></div>
-      <button type="button" name="button"><i class="material-icons">sync</i></button>
-      <button type="button" name="button"><i class="material-icons">delete</i></button>
+
+    <div id=item_lines></div>
+
+    <div id="Totals">
+      <div class="outputs">
+        Current balance
+        <input id="Cb" type="number" name="" value="" style="background-color: #222222;">
+      </div>
+      <br>
+      <div class="outputs">
+        Total
+        <div class="output_box" id="total"></div>
+      </div>
+      <br>
+      <div class="outputs">
+        Change
+        <div class="output_box" id="Change"></div>
+      </div>
     </div>
     <script src="cart_tracker.js" charset="utf-8"></script>
   </body>
 </html>
+
+<!-- <div class="item_line" id="first-line">
+<input type="text" name="Item-name" value="">
+<div class="middle-text"></div>
+<input type="number" name="Cuantity" value="">
+<div class="middle-text"></div>
+<input type="number" name="Price" value="">
+<div class="middle-text"></div>
+<div class="pricexcuantity"></div>
+<button type="button" name="button"><i class="material-icons">sync</i></button>
+<button type="button" name="button"><i class="material-icons">delete</i></button>
+</div> -->
