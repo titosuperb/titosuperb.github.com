@@ -1,4 +1,11 @@
 var Item_line_objects = [];
+var isFirefox = typeof InstallTrigger !== 'undefined';
+var numotex = isFirefox ? "text" : "number";
+
+if(isFirefox){
+  document.getElementById("Cb").type = "text";
+}
+
 class Item_line {
   constructor(name, posistion){
     this.name = name;
@@ -10,9 +17,9 @@ class Item_line {
     <div class="item_line" id='` + this.name + `'>
       <input type="text" name="Item-name" value="" id='`+ this.name + "-Item-name" +`'>
       <div class="middle-text"></div>
-      <input type="number" name="Cuantity" value="1" id='`+ this.name + "-Cuantity" +`'>
+      <input type="`+numotex+`" name="Cuantity" value="1" id='`+ this.name + "-Cuantity" +`'>
       <div class="middle-text"></div>
-      <input type="number" name="Price" value="" id='`+this.name + "-Price" +`'>
+      <input type="`+numotex+`" name="Price" value="" id='`+this.name + "-Price" +`'>
       <div class="middle-text"></div>
       <div class="output_box" id='`+ this.name + "-pricexcuantity" + `'></div>
       <button type="button" name="button" onclick="`+ this.name + `.clear()"><i class="material-icons">sync</i></button>
