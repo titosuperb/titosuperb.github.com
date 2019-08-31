@@ -1,0 +1,15 @@
+button {
+  background-color: #222222;
+  color: white;
+  border-width: 0px;
+}
+.material-icons {
+  font-size: 60px;
+}
+.center_items {
+  text-align: center;
+}
+
+.centered_item {
+  display: inline-block;
+}
