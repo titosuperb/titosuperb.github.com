@@ -3,3 +3,7 @@ button {
   border-width: 0px;
   color: white;
 }
+
+.center_items {
+  text-align: center;
+}
