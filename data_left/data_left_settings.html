@@ -12,10 +12,12 @@
     <button type="button" name="button" onclick="window.location.href='data_left.html'"><i class="material-icons">home</i></button>
     <p>Config</p>
     <div class="center_items" id="dataBoxes">
-      <div class="">Days your plan lasts</div><input type="number" name="" value="">
-      <div class="">Data in your plan. (Mb)</div><input type="number" name="" value="">
-      <div class="">Last plan recharge</div><input type="date" name="" value="">
+      <div class="">Days your plan lasts</div><input id="planLengthInp" type="number" name="" value="">
+      <div class="">Data in your plan. (Mb)</div><input id="planDataInp" type="number" name="" value="">
+      <div class="">Last plan recharge</div><input id="lastRechargeInp" type="date" name="" value="">
     </div>
-    <button type="button" name="button" id="save">Save</button>
+    <button type="button" name="button" id="save" onclick="saveInp();">Save</button>
+
+    <script src="data_left_settings.js" charset="utf-8"></script>
   </body>
 </html>
