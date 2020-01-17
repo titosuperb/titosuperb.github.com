@@ -1,0 +1,11 @@
+.buttons {
+  display: grid;
+  grid-template-rows: 50% 50% 50%;
+}
+
+button {
+  color: white;
+  background-color: #2d2d2d;
+  margin: 10%:;
+  padding: 10%;
+}
