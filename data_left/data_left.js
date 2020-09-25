@@ -41,23 +41,27 @@ function gdn(d){
 }
 
 function differenceDays(date1, date2){
-  d1 = [date1, date2][mrd(date1, date2)];//More recent date
-  d2 = [date1, date2][(!mrd(date1, date2)) ? 1:0];
+  if((date1.getDay() == date2.getDay()) && (date1.getMonth() == date2.getMonth()) && (date1.getYear() == date2.getYear())){
+    return 0
+  } else {
+    d1 = [date1, date2][mrd(date1, date2)];//More recent date
+    d2 = [date1, date2][(!mrd(date1, date2)) ? 1:0];
 
-  //Scenario 1: Two years apart or more
-  //Scenario 2: One year apart
-  //Scenario 1: Same years apart
+    //Scenario 1: Two years apart or more
+    //Scenario 2: One year apart
+    //Scenario 1: Same years apart
 
-  dd1 = gdn(d1);
-  dd2 = gdn(d2);
+    dd1 = gdn(d1);
+    dd2 = gdn(d2);
 
-  yd = d1.getFullYear() - d2.getFullYear();
-  if(yd >= 2){
+    yd = d1.getFullYear() - d2.getFullYear();
+    if(yd >= 2){
+      
+    }else if (yd == 1) {
 
-  }else if (yd == 1) {
-
-  }else{
-    return dd1 - dd2
+    }else{
+      return dd1 - dd2
+    }
   }
 }
 
@@ -73,7 +77,10 @@ let today = new Date();
 if((planData === null) || (lastRecharge === null) || (planLength === null)){
   document.getElementById("max_data").innerHTML = "";
   document.getElementById("days_left").innerHTML = "Please enter the information of your plan.";
-} else {
-  document.getElementById("max_data").innerHTML = Math.floor((planData/planLength)*differenceDays(lastRechargeDate, today))+"Mb";
-  document.getElementById("days_left").innerHTML = planLength - differenceDays(lastRechargeDate, today) + " days left";
+}else if(differenceDays(lastRechargeDate, today) >= planLength){
+  document.getElementById("max_data").innerHTML = "";
+  document.getElementById("days_left").innerHTML = "Please recharge your phone plan ("+differenceDays(lastRechargeDate, today)+" since last recharge).";
+}else{
+  document.getElementById("max_data").innerHTML = Math.floor((planData/planLength)*(differenceDays(lastRechargeDate, today)+1))+"Mb";
+  document.getElementById("days_left").innerHTML = planLength - differenceDays(lastRechargeDate, today) + " day(s) left";
 }
