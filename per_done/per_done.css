@@ -1,0 +1,25 @@
+.centered-div {
+  text-align: center;
+  /* border: 2px solid grey; */
+  border-radius: 2px;
+  grid-template-columns: 45% 10% 45%;
+}
+
+input {
+  color: white;
+  background-color: #2d2d2d;
+  border: 0.05em solid #e3e3e3;
+  border-radius: 0.2em;
+  width: 40%;
+  font-size: 4em;
+}
+
+#output {
+  font-size: 4em;
+  text-align: center;
+}
+
+.text {
+  font-size: 4em;
+  text-align: center;
+}
